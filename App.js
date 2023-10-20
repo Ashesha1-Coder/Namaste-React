@@ -38,14 +38,17 @@ const Header=()=>{
         </div>
     );
 };
-const RestaurantCard=()=>{
+/**below is an example of inline style in js */
+const RestaurantCard=(props)=>{
+
     return(
         <div className="res-card"style={{backgroundColor:"#f0f0f0"}}>
            <img className="res-logo" alt ="res-logo" 
            src="https://img.freepik.com/premium-photo/delicious-details-closeup-food-table-with-purpose_950053-1527.jpg"/>
-            <h3>Food Master</h3>
-            <h4>Biryani,North-Indian,Asian</h4>
+            <h3>{props.resName}</h3>
+            <h4>{props.cuisine} </h4>
             <h4>4.3</h4>
+            <h4>38 minutes</h4>
              </div>
     )
 }
@@ -54,7 +57,11 @@ const Body=()=>{
         <div className="body">
             <div className="Search">Search</div>
             <div className="res-container">
-                <RestaurantCard/>
+                <RestaurantCard resName="Food Master" cuisine="Biryani, North Indian , Asian"/>
+
+                <RestaurantCard resName="KFC" cuisine="Burger, french Fry"/>
+            
+                
             </div>
         </div>
     )
