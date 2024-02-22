@@ -1,22 +1,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-/*
--header
-logo
-nav items
-body
-search 
-restaurant container
-res card
-Footer
-Copyright
-Links
-Contact Information
 
-
-
-*/
 
 const Header=()=>{
     return(
@@ -38,10 +23,10 @@ const Header=()=>{
         </div>
     );
 };
-/**below is an example of inline style in js */
+/**below is an example of inline style in js  */
 const RestaurantCard=(props)=>{
-
-    return(
+const{resName,cuisine}= props;
+     return(
         <div className="res-card"style={{backgroundColor:"#f0f0f0"}}>
            <img className="res-logo" alt ="res-logo" 
            src="https://img.freepik.com/premium-photo/delicious-details-closeup-food-table-with-purpose_950053-1527.jpg"/>
@@ -52,12 +37,14 @@ const RestaurantCard=(props)=>{
              </div>
     )
 }
+/*passing props to component rescard below*/
 const Body=()=>{
     return(
         <div className="body">
             <div className="Search">Search</div>
             <div className="res-container">
-                <RestaurantCard resName="Food Master" cuisine="Biryani, North Indian , Asian"/>
+         
+    <RestaurantCard resName="Food Master" cuisine="Biryani, North Indian , Asian"/>
 
                 <RestaurantCard resName="KFC" cuisine="Burger, french Fry"/>
             
